@@ -3,6 +3,7 @@ function MOT_to_UA_Detrac(gt_file, seq_name, save_folder, img_size)
 % seq_name: save name
 % save_folder: save dir
 fileID = fopen(gt_file,'r');
+
 A = textscan(fileID,'%d %d %d %d %d %d %d %d %d %d','Delimiter',',');
 fclose(fileID);
 
@@ -50,4 +51,5 @@ end
 gtInfo.V = V;
 gtInfo.img_size = img_size;
 save_path = [save_folder,'\',seq_name,'.mat'];
+disp(save_path)
 save(save_path,'gtInfo');

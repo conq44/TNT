@@ -14,6 +14,7 @@ Y = gtInfo.Y;
 W = gtInfo.W;
 H = gtInfo.H;
 img_list = dir([img_folder,'\*.',img_format]);
+disp('here')
 for m = 1:length(img_list)
     img_name = img_list(m).name;
     img_path = [img_folder,'\',img_name];
@@ -21,6 +22,7 @@ for m = 1:length(img_list)
     img_size = size(img);
     num_id = size(H,2);
     if m>size(gtInfo.H,1)
+        disp('ha')
         continue
     end
     for k = 1:num_id

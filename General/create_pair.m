@@ -14,9 +14,8 @@ for n = 1:classNum
 end
 
 
-fileID = fopen(save_dir,'w');
-
-
+fileID = fopen(save_dir,'a+');
+disp(fileID)
 K = n_fold;         % 10
 pairNum = num_pair; % 300
 for k = 1:K
